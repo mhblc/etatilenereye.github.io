@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halısaha Takip Sistemi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Halısaha Takip Sistemi</h1>
+
+        <div class="add-team-form">
+            <label for="teamName">Takım Adı:</label>
+            <input type="text" id="teamName" placeholder="Takım adını girin">
+            <button onclick="addTeam()">Takım Ekle</button>
+        </div>
+
+        <div id="teams" class="teams-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.add-team-form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.add-team-form input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.add-team-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-team-form button:hover {
+    background-color: #218838;
+}
+
+.teams-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.team {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+}
+
+.team h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.team .player-form {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.team .player-form input {
+    flex: 1;
+    padding: 8px;
+    font-size: 14px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.team .player-form button {
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.team .player-form button:hover {
+    background-color: #0056b3;
+}
+
+.team ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.team ul li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.team ul li:last-child {
+    border-bottom: none;
+}
+let teams = [];
+
+function addTeam() {
+    const teamName = document.getElementById('teamName').value;
+    if (teamName) {
+        teams.push({ name: teamName, players: [] });
+        document.getElementById('teamName').value = '';
+        renderTeams();
+    }
+}
+
+function addPlayer(teamIndex) {
+    const playerName = document.getElementById(`playerName-${teamIndex}`).value;
+    if (playerName) {
+        teams[teamIndex].players.push(playerName);
+        document.getElementById(`playerName-${teamIndex}`).value = '';
+        renderTeams();
+    }
+}
+
+function renderTeams() {
+    const teamsDiv = document.getElementById('teams');
+    teamsDiv.innerHTML = '';
+    teams.forEach((team, index) => {
+        const teamDiv = document.createElement('div');
+        teamDiv.className = 'team';
+        teamDiv.innerHTML = `
+            <h3>${team.name}</h3>
+            <div class="player-form">
+                <input type="text" id="playerName-${index}" placeholder="Oyuncu adı girin">
+                <button onclick="addPlayer(${index})">Oyuncu Ekle</button>
+            </div>
+            <ul>
+                ${team.players.map(player => `<li>${player}</li>`).join('')}
+            </ul>
+        `;
+        teamsDiv.appendChild(teamDiv);
+    });
+}

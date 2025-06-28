@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Değerlendirmeler</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <h1>Kullanıcı Değerlendirmeleri</h1>
+    
+    <form action="/addReview" method="POST">
+        <label for="username">Kullanıcı Adı:</label>
+        <input type="text" id="username" name="username" required>
+        
+        <label for="rating">Puan:</label>
+        <select id="rating" name="rating" required>
+            <option value="5">5 - Mükemmel</option>
+            <option value="4">4 - İyi</option>
+            <option value="3">3 - Orta</option>
+            <option value="2">2 - Kötü</option>
+            <option value="1">1 - Çok Kötü</option>
+        </select>
+        
+        <label for="comment">Yorum:</label>
+        <textarea id="comment" name="comment" rows="4" required></textarea>
+        
+        <button type="submit">Gönder</button>
+    </form>
+    
+    <h2>Değerlendirmeler</h2>
+    <div id="reviews">
+        <div th:each="review : ${reviews}">
+            <p><strong>[[${review.username}]]</strong> ([[${review.rating}]]/5)</p>
+            <p>[[${review.comment}]]</p>
+        </div>
+    </div>
+</body>
+</html>

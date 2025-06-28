@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halısaha Takip Sistemi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .team {
+            border: 1px solid #000;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .team h3 {
+            margin-top: 0;
+        }
+        .team input {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Halısaha Takip Sistemi</h1>
+
+    <div>
+        <label for="teamName">Takım Adı:</label>
+        <input type="text" id="teamName">
+        <button onclick="addTeam()">Takım Ekle</button>
+    </div>
+
+    <div id="teams"></div>
+
+    <script>
+        let teams = [];
+
+        function addTeam() {
+            const teamName = document.getElementById('teamName').value;
+            if (teamName) {
+                teams.push({ name: teamName, players: [] });
+                document.getElementById('teamName').value = '';
+                renderTeams();
+            }
+        }
+
+        function addPlayer(teamIndex) {
+            const playerName = document.getElementById(`playerName-${teamIndex}`).value;
+            if (playerName) {
+                teams[teamIndex].players.push(playerName);
+                document.getElementById(`playerName-${teamIndex}`).value = '';
+                renderTeams();
+            }
+        }
+
+        function renderTeams() {
+            const teamsDiv = document.getElementById('teams');
+            teamsDiv.innerHTML = '';
+            teams.forEach((team, index) => {
+                const teamDiv = document.createElement('div');
+                teamDiv.className = 'team';
+                teamDiv.innerHTML = `
+                    <h3>${team.name}</h3>
+                    <div>
+                        <label for="playerName-${index}">Oyuncu Adı:</label>
+                        <input type="text" id="playerName-${index}">
+                        <button onclick="addPlayer(${index})">Oyuncu Ekle</button>
+                    </div>
+                    <ul>
+                        ${team.players.map(player => `<li>${player}</li>`).join('')}
+                    </ul>
+                `;
+                teamsDiv.appendChild(teamDiv);
+            });
+        }
+    </script>
+</body>
+</html>
