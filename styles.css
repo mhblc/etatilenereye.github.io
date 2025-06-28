@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(images/antalya.jpg); /* Arka plan resmi */
+    background-repeat: no-repeat; /* Resmin tek seferde tekrarlanmasını engeller */
+    background-position: center center; /* Resmin sayfa ortasında yer almasını sağlar */
+    background-attachment: fixed; /* Resmin sabit konumda kalmasını sağlar */
+    background-size: cover; /* Resmi ekran boyutuna göre sığdırır */
+}
+
+header {
+    background-color: rgba(51, 51, 51, 0.8); /* Koyu gri arka plan rengi */
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 2em;
+}
+
+section {
+    margin-bottom: 2em;
+}
+
+.location {
+    background-color: rgba(255, 255, 255, 0.9); /* Beyaz arka plan rengi */
+    padding: 1em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.location h3, .location p, .location button {
+    color: #333; /* Metin rengini değiştir */
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7); /* Metin gölgesi ekle */
+}
+
+.location img {
+    width: 100%; /* Resmin genişliğini %100 olarak ayarla */
+    height: auto; /* Otomatik yükseklik */
+    border-radius: 4px;
+}
+
+form {
+    background-color: #fff;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button, .button {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+button:hover, .button:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: rgba(51, 51, 51, 0.8); /* Koyu gri arka plan rengi */
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#contact-info {
+    display: flex;
+    justify-content: space-between;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#contact-info p {
+    margin: 0;
+    padding-right: 10px;
+}
+
+#contact-info strong {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+#hakkimizda p, #degerlendirmeler p {
+    background-color: #fff; /* Beyaz arka plan rengi */
+    color: #333; /* Koyu gri metin rengi */
+    padding: 1em; /* Kenar boşluğu */
+    margin: 0; /* Dış boşlukları sıfırla */
+    border-radius: 0 0 4px 4px; /* Yuvarlatılmış köşeler */
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tatildeyizz.com</title>
+    <link rel="stylesheet" href="styles.css">
+   
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Tatildeyizz Logo">
+        </div>
+        
+        <h1>TatildeyiZz</h1>
+
+        <nav>
+            <ul>
+                <li><a href="#tatil-yerleri">Tatil Yerleri</a></li>
+                <li><a href="#odeme-sistemi">Ödeme Sistemi</a></li>
+                <li><a href="#iletisim">İletişim</a></li>
+                <li><a href="#degerlendirmeler">Değerlendirmeler</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="hakkimizda">
+            <h2>Hakkımızda</h2>
+            <p>Tatildeyizz.com, Muhammet Halim Balcı ve Emirhan Özer adlı iki öğrenci tarafından kurulmuş bir tatil rezervasyon platformudur.Bizler,en güzel tatil destinasyonlarını sizin için bir araya getiriyor ve uygun fiyatlarla kaliteli hizmet sunmayı hedefliyoruz. </p>
+            <p>Tatildeyizz, sürekli gelişen ve yenilenen bir platformdur. Kullanıcılarımızın tatil deneyimini daha da özel hale getirmek için her gün çalışıyoruz. Sitemizi kullandığınızda, harika tatil fırsatlarıyla karşılaşacak, kolayca rezervasyon yapabilecek ve unutulmaz bir tatil deneyimi yaşayacaksınız.</p>
+            <p>Tatildeyizz'e hoş geldiniz, hayalinizdeki tatili bulmanız için buradayız!</p>
+        </section>
+
+        <section id="tatil-yerleri">
+            <h2>Tatil Yerleri</h2>
+            <div class="location" id="antalya">
+                <h3>Antalya</h3>
+                <img src="images/antalya.jpg" alt="Antalya">
+                <p>Antalya, Türkiye'nin güney sahilinde yer alan ve turizmin kalbi olan bir şehirdir. Güzel plajları, antik kalıntıları ve tarihi yerleri ile ünlüdür. Antalya, aynı zamanda muhteşem doğası, şelaleleri ve çeşitli su sporları imkanları ile de bilinir.</p>
+                <button onclick="bookNow('Antalya')">Şimdi Rezervasyon Yap</button>
+            </div>
+            <div class="location" id="bodrum">
+                <h3>Bodrum</h3>
+                <img src="images/bodrum.jpg" alt="Bodrum">
+                <p>Bodrum, Ege Bölgesi'nde yer alan ve Türkiye'nin en popüler tatil destinasyonlarından biridir. Gece hayatı, beyaz evleri ve mavi yolculukları ile ünlüdür. Ayrıca, tarihi Bodrum Kalesi ve antik tiyatro gibi tarihi yerler de ziyaretçilerin ilgisini çeker.</p>
+                <button onclick="bookNow('Bodrum')">Şimdi Rezervasyon Yap</button>
+            </div>
+            <div class="location" id="kapadokya">
+                <h3>Kapadokya</h3>
+                <img src="images/kapadokya.jpg" alt="Kapadokya">
+                <p>Kapadokya, Türkiye'nin Orta Anadolu Bölgesi'nde yer alan büyülü bir bölgedir. Peri bacaları, yer altı şehirleri ve balon turları ile ünlüdür. Kapadokya'da, tarihi ve doğal güzelliklerin birleştiği benzersiz bir tatil deneyimi yaşayabilirsiniz.</p>
+                <button onclick="bookNow('Kapadokya')">Şimdi Rezervasyon Yap</button>
+            </div>
+            <div class="location" id="izmir">
+                <h3>İzmir</h3>
+                <img src="images/izmir.jpg" alt="İzmir">
+                <p>İzmir, Türkiye'nin üçüncü büyük şehri olup, zengin kültürel mirasa sahiptir. Tarihi alanları, Ege Denizi'ne kıyısı ve sıcak iklimi ile ünlüdür. İzmir, aynı zamanda lezzetli Ege mutfağı ve hareketli gece hayatı ile de ziyaretçilerini cezbeder.</p>
+                <button onclick="bookNow('İzmir')">Şimdi Rezervasyon Yap</button>
+            </div>
+            <div class="location" id="fethiye">
+                <h3>Fethiye</h3>
+                <img src="images/fethiye.jpg" alt="Fethiye">
+                <p>Fethiye, Türkiye'nin güneybatısında, Muğla ilinde yer alan bir cennettir. Ölüdeniz, Likya Yolu ve muhteşem koyları ile ünlüdür. Fethiye, doğa yürüyüşleri, yamaç paraşütü ve tarihi Likya kalıntıları ile dolu dolu bir tatil sunar.</p>
+                <button onclick="bookNow('Fethiye')">Şimdi Rezervasyon Yap</button>
+            </div>
+            <div class="location" id="amasya">
+                <h3>Amasya</h3>
+                <img src="images/amasya.jpg" alt="Amasya">
+                <p>Amasya, Türkiye'nin Karadeniz Bölgesi'nde yer alan bir şehirdir. Binlerce yıllık tarihi, eşsiz doğal güzellikleri ve zengin mutfağıyla tatil için ideal bir destinasyondur. Tarih kokan sokakları, etkileyici doğal güzellikleri, zengin mutfağı ve huzur veren atmosferiyle Amasya, unutulmaz bir tatil deneyimi sunar.</p>
+                <button onclick="bookNow('Amasya')">Şimdi Rezervasyon Yap</button>
+            </div>
+            <div class="location" id="sivas">
+                <h3>Sivas</h3>
+                <img src="images/sivas.jpg" alt="Sivas">
+                <p>Sivas, tarihi ve doğal güzellikleriyle eşsiz bir tatil destinasyonu. Selçuklu ve Osmanlı dönemlerinden kalma Divriği Ulu Camii, Gök Medrese ve Buruciye Medresesi gibi yapılar, tarih severler için büyük bir çekim merkezi. Doğa tutkunları için Yıldız Dağı Kış Sporları Merkezi, Kangal Balıklı Kaplıca ve turkuaz renkli Gürün Gökpınar Gölü gibi yerler bulunuyor.</p>
+                <button onclick="bookNow('Sivas')">Şimdi Rezervasyon Yap</button>
+            </div>
+            
+        </section>
+
+        <section id="odeme-sistemi">
+            <h2>Ödeme Sistemi</h2>
+            <form id="payment-form" onsubmit="return processPayment()">
+                <label for="name">Ad Soyad:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="card-number">Kart Numarası:</label>
+                <input type="text" id="card-number" name="card-number" required>
+                
+                <label for="expiry-date">Son Kullanma Tarihi:</label>
+                <input type="text" id="expiry-date" name="expiry-date" required>
+                
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" required>
+                
+                <button type="submit">Ödeme Yap</button>
+            </form>
+        </section>
+
+        <section id="iletisim">
+            <h2>İletişim</h2>
+            <form id="contact-form" onsubmit="return submitContactForm()">
+                <label for="fullname">Ad Soyad:</label>
+                <input type="text" id="fullname" name="fullname" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Mesaj:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Gönder</button>
+            </form>
+            <section id="degerlendirmeler">
+                <h2>Kullanıcı Değerlendirmeleri</h2>
+                
+                <form id="review-form">
+                    <label for="username">Kullanıcı Adı:</label>
+                    <input type="text" id="username" name="username" required>
+                    
+                    <label for="rating">Puan:</label>
+                    <select id="rating" name="rating" required>
+                        <option value="5">5 - Mükemmel</option>
+                        <option value="4">4 - İyi</option>
+                        <option value="3">3 - Orta</option>
+                        <option value="2">2 - Kötü</option>
+                        <option value="1">1 - Çok Kötü</option>
+                    </select>
+                    
+                    <label for="comment">Yorum:</label>
+                    <textarea id="comment" name="comment" rows="4" required></textarea>
+                    
+                    <button type="submit">Gönder</button>
+                </form>
+                <div id="review-success" style="display: none; color: green;">
+                    Yorumunuz başarıyla gönderildi!
+                </div>
+           
+        
+        <h2>Değerlendirmeler</h2>
+        <div id="reviews">
+            <div th:each="review : ${reviews}">
+                <p><strong>DEĞERLENDİRMELER</strong></p>
+                <p>Ahmet Yılmaz - 5/5 - Mükemmel bir tatil deneyimi yaşadım! Tatildeyizz.com sayesinde harika bir tatil geçirdim, kesinlikle tekrar tercih edeceğim.</p>
+                <p> Ayşe Kaya - 4/5 - Personel çok ilgili ve yardımseverdi. Her şey mükemmel planlanmıştı. Kesinlikle tavsiye ederim!</p>
+                <p> Mehmet Demir - 3/5 -  Beklediğimden çok daha iyi bir tatil geçirdim. Özellikle otelin temizliği ve yemekleri beni çok memnun etti. Teşekkürler Tatildeyizz.com!</p>
+                <p> Fatma Yıldız - 4/5 - Tatil boyunca hiçbir problem yaşamadım. Rehberler çok bilgilendiriciydi ve aktiviteler çok eğlenceliydi. Kesinlikle tekrar gelmek istiyorum.</p>
+                <p> Zeynep Şahin - 4/5 - Tatildeyizz.com'da geçirdiğim tatilimden çok memnun kaldım. Hem dinlendim hem de eğlendim. Herkese tavsiye ederim!</p>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <footer>
+        <div id="contact-info">
+            <p><strong>Bize Ulaşın:</strong></p>
+            <p>Email: info@tatildeyizz.com</p>
+            <p>Telefon: +90 123 456 78 90</p>
+            <p>Instagram: <a href="https://www.instagram.com/tatildeyizz">@tatildeyizz</a></p>
+        </div>
+        <p>&copy; Tatildeyizz</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+
+</body>
+</html>
